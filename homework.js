@@ -94,14 +94,19 @@ function lesser (a,b) {
 //
 // If any other language code is used, return nothing.
 
-function multigreeting (name,language) {
-    var language = en;
-    var language = es;
-    var language = fr;
-    var language = eo;
-    if (en) return ("Hello, " + name + "!")
-}
-multigreeting("Ashley", "en")
+function multigreeting (name, language) {
+   if (language === 'en') {
+        return 'Hello, ' + name + '!'
+   } else if (language === 'es') {
+       return '¡Hola, ' + name + '!' 
+       } else if (language === 'fr') {
+           return 'Bonjour, ' + name + '!'
+       } else if (language === 'eo') {
+           return 'Saluton, ' + name + '!'
+       } 
+   }
+
+multigreeting()
 
 // 10. Create a function, howOld, that takes a birthdate and a another
 // date (the "current date") and returns how many years old the person
